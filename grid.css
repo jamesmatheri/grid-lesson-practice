@@ -1,5 +1,5 @@
 body{
-    background-color: antiquewhite;
+    background-color: #393f4d;
     margin: 0;
     text-align: center;
 }
@@ -7,51 +7,52 @@ body{
 
 .container{
     display: grid;
-    column-gap: 15px;
-    row-gap: 15px;
-    border: 10px solid #eee;
-    grid-template-columns: repeat(1, 1fr) repeat(1, 3fr);
-    grid-template-rows: repeat(2, 1fr) repeat(1, 5fr) repeat(1, 1fr);
-    grid-template-areas: 
-    "header header"
-    "aside nav"
-    "aside article"
-    "footer footer"
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    border: 10px solid #393f4d;
+    border-radius: 6px;
+   
     ;
 }
 
 
 .container >*{
-
     padding: 30px;
+    border: 10px solid #393f4d;
+    border-radius: 4px;
+   
 }
 
 
 header{
-    grid-area: header;
-    background-color: #b0b0afa9;
+    grid-column: 1/4;
+    background-color: #006157;
 }
 
 
 nav{
-    grid-area: nav;
-    background-color:  #e3e3d4ec;
+   grid-column: 2/4;
+   grid-row: 2/3;
+   background-color: #642cde;
+
 }
 
 
 aside{
-    grid-area: aside;
-    background-color: blanchedalmond;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    background-color: #005B94;
 }
 
 
 article{
-    grid-area: article;
+    grid-column: 2/4;
+    grid-row: 3/5;
     background-color: #eee;
 }
 
 
 footer{
-    grid-area: footer;
-    background-color: #b0b0afa9;
+    grid-column: 1/4;
+    background-color: #393f4d;
 }
